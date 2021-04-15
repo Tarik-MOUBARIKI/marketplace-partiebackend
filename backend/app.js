@@ -23,9 +23,9 @@ app.use(bodyParser.json());
 mongoose.connect('mongodb+srv://TARIK:tarekm@cluster0.vagtk.mongodb.net/marketplace?retryWrites=true&w=majority' , {
   useNewUrlParser: true
 }).then(() => {
-  logger.info("Successfully connected to the database");    
+  console.log("Successfully connected to the database");    
 }).catch(err => {
-  logWinston.error('Could not connect to the database. Exiting now...', err);
+ console.log('Could not connect to the database. Exiting now...', err);
   logger.exit();
 });
 
